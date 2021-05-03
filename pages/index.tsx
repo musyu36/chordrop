@@ -6,12 +6,12 @@ import { Chord } from '../interfaces'
 const chord: Chord = {
   root: {
     number: 0,
-    name: 'C'
+    name: 'C',
   },
   chordType: {
     array: [4, 7],
-    name: 'maj'
-  }
+    name: 'maj',
+  },
 }
 
 const IndexPage = () => (
@@ -22,7 +22,7 @@ const IndexPage = () => (
         <a>About</a>
       </Link>
     </p>
-    <ChordPanel chord={chord}/>
+    <ChordPanel chord={chord} />
   </Layout>
 )
 

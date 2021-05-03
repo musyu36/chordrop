@@ -6,11 +6,12 @@ type Props = {
 }
 
 const ChordPanel = ({ chord }: Props) => (
-    <div>
-        <h3>
-            {chord.root.name}{chord.chordType.name}
-        </h3>
-    </div>
+  <div>
+    <h3>
+      {chord.root.name}
+      {chord.chordType.name}
+    </h3>
+  </div>
 )
 
 export default ChordPanel
