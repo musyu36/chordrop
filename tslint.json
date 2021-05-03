@@ -4,7 +4,6 @@
         "prettier": true
     },
     "extends": [
-        "tslint-react", 
         "tslint-config-prettier"
     ]
 }
