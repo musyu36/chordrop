@@ -3,6 +3,10 @@ body {
   color: var(--c-black);
 }
 
+ul {
+  list-style: none;
+}
+
 :root {
   --c-black: #2a2a2a;
   --c-gray: #707070;

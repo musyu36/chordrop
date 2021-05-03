@@ -1,0 +1,10 @@
+.chords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.chordItem {
+  margin: 0px 8px 40px;
+  transition: 1s;
+}
