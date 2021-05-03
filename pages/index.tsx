@@ -1,5 +1,18 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import ChordPanel from '../components/ChordPanel'
+import { Chord } from '../interfaces'
+
+const chord: Chord = {
+  root: {
+    number: 0,
+    name: 'C'
+  },
+  chordType: {
+    array: [4, 7],
+    name: 'maj'
+  }
+}
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
@@ -9,6 +22,7 @@ const IndexPage = () => (
         <a>About</a>
       </Link>
     </p>
+    <ChordPanel chord={chord}/>
   </Layout>
 )
 
