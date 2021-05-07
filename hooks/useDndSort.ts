@@ -137,6 +137,7 @@ export const useDnDSort = <T>(defaultItems: T[]): DnDSortResult<T>[] => {
     dragStyle.zIndex = ''
     dragStyle.cursor = ''
     dragStyle.transform = ''
+    dragStyle.boxShadow = ''
 
     // ドラッグしている要素をstateから削除
     state.dragElement = null
@@ -203,6 +204,8 @@ export const useDnDSort = <T>(defaultItems: T[]): DnDSortResult<T>[] => {
             // ドラッグしている要素のスタイルを上書き
             element.style.transition = '' // アニメーションを無効にする
             element.style.cursor = 'grabbing' // カーソルのデザインを変更
+            element.style.transform = `translate(0px, -4px)`
+            element.style.boxShadow = '0 8px 20px 0 rgba(50, 50, 50, 0.08)'
 
             // 要素の座標を取得
             const { left: x, top: y } = element.getBoundingClientRect()
