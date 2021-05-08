@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SetterOrUpdater, useRecoilState } from 'recoil'
+import { SetterOrUpdater, useSetRecoilState } from 'recoil'
 import { modalState } from '../atoms/ModalAtom'
 import { Chord } from '../interfaces'
 import styles from '../styles/component/ChordPanel.module.scss'
@@ -9,10 +9,7 @@ type Props = {
 }
 
 const ChordPanel = ({ chord }: Props) => {
-  const [_, setModalValue]: [
-    boolean,
-    SetterOrUpdater<boolean>
-  ] = useRecoilState(modalState)
+  const setModalValue: SetterOrUpdater<boolean> = useSetRecoilState(modalState)
 
   const openModal = (e: React.MouseEvent) => {
     e.stopPropagation()
