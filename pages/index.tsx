@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import Chords from '../components/Chords'
+import Modal from '../components/Modal'
 import { Chord } from '../interfaces'
+import { RecoilRoot } from 'recoil'
 
 const chords: Chord[] = [
   {
@@ -47,15 +49,18 @@ const chords: Chord[] = [
 ]
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-    <Chords chords={chords} />
-  </Layout>
+  <RecoilRoot>
+    <Layout title="Home | Next.js + TypeScript Example">
+      <h1>Hello Next.js 👋</h1>
+      <p>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </p>
+      <Chords chords={chords} />
+      <Modal />
+    </Layout>
+  </RecoilRoot>
 )
 
 export default IndexPage

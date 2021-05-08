@@ -4,5 +4,12 @@
   width: 210px;
   height: 178px;
   justify-content: center;
+  align-items: center;
   border-radius: 16px;
+
+  .root {
+  }
+  .chordType {
+    color: var(--c-gray);
+  }
 }
